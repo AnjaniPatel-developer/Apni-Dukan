@@ -10,12 +10,17 @@ const Router = require("./routes")
 const app = express()
 
 // ✅ CORS
+const cors = require("cors")
+
 app.use(cors({
     origin: [
         'http://localhost:5173',
-        'https://apni-dukan-red.vercel.app'
+        'https://apni-dukan-76jh.onrender.com'  // ← FRONTEND URL DAALO!
     ],
-    optionsSuccessStatus: 200
+    optionsSuccessStatus: 200,
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }))
 
 app.use(express.json())
