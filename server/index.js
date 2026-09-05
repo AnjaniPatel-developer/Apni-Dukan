@@ -9,13 +9,13 @@ const Router = require("./routes")
 
 const app = express()
 
-// ✅ CORS
-const cors = require("cors")
+
+
 
 app.use(cors({
     origin: [
         'http://localhost:5173',
-        
+
         'https://apni-dukan-76jh.onrender.com'  
     ],
     optionsSuccessStatus: 200,
